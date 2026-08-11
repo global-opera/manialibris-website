@@ -1,14 +1,406 @@
-<!DOCTYPE html>
-<html lang="pt">
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catálogo | Mania Libris</title>
-<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:Georgia,serif;background:#000;color:#fff;line-height:1.6}nav{background:#000;padding:20px 0;border-bottom:2px solid #DAA520}.nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 40px}.logo{display:flex;align-items:center;gap:15px;text-decoration:none}.logo-text{color:#DAA520;font-size:1.5em}.nav-links{display:flex;gap:30px;list-style:none}.nav-links a{color:#DAA520;text-decoration:none;font-size:1.1em}.container{max-width:1200px;margin:0 auto;padding:60px 40px}h1{font-size:2.5em;color:#DAA520;text-align:center;margin-bottom:50px}.books-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}.book-card{background:#111;border:2px solid #DAA520;border-radius:10px;padding:30px}.book-card h3{color:#DAA520;font-size:1.8em;margin-bottom:15px}.book-card .author{color:#fff;font-size:1.1em;margin-bottom:10px;font-style:italic}.book-card .description{color:#ccc;margin-bottom:20px}.btn{display:inline-block;background:#DAA520;color:#000;padding:12px 30px;text-decoration:none;border-radius:5px;font-weight:bold}.btn:hover{background:#FFC125}footer{background:#000;border-top:2px solid #DAA520;padding:40px 0;margin-top:80px;text-align:center}.footer-links{display:flex;justify-content:center;gap:30px;margin-top:20px}.footer-links a{color:#DAA520;text-decoration:none}@media (max-width:768px){.nav-container{padding:0 20px;flex-direction:column;gap:20px}.books-grid{grid-template-columns:1fr}}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo completo de livros da Mania Libris - Obras sobre fé, tecnologia, IA e espiritualidade">
+    <title>Catálogo - Mania Libris</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #000;
+            color: #f8f8f8;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(0, 0, 0, 0.95);
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #DAA520;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #DAA520;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: #DAA520;
+            color: #000;
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+            border-bottom: 3px solid #DAA520;
+        }
+
+        h1 {
+            color: #DAA520;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #ccc;
+            font-style: italic;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Book Detail Section */
+        .book-detail {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border-left: 5px solid #DAA520;
+        }
+
+        .book-detail h2 {
+            color: #DAA520;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .book-detail h3 {
+            color: #DAA520;
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .book-detail p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .book-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: #0a0a0a;
+            border-radius: 5px;
+        }
+
+        .book-meta div {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .book-meta strong {
+            color: #DAA520;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #DAA520;
+            color: #000;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin-top: 1rem;
+            margin-right: 1rem;
+        }
+
+        .btn:hover {
+            background: #c99400;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a0a;
+            padding: 2rem;
+            text-align: center;
+            border-top: 2px solid #DAA520;
+        }
+
+        footer p {
+            color: #888;
+        }
+
+        footer a {
+            color: #DAA520;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .book-detail h2 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .book-meta {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-<nav><div class="nav-container"><a href="index.html" class="logo"><span class="logo-text">Mania Libris</span></a><ul class="nav-links"><li><a href="index.html">Início</a></li><li><a href="catalogo.html">Catálogo</a></li><li><a href="recursos.html">Recursos</a></li></ul></div></nav>
-<div class="container"><h1>Catálogo de Livros</h1><div class="books-grid"><div class="book-card"><h3>Tua Vontade</h3><p class="author">Stéphane Jean Cassani</p><p class="description">Diálogos sobre IA, Poder e a Alma Humana</p><a href="tua-vontade.html" class="btn">Ver Detalhes</a></div><div class="book-card"><h3>O Lado de Adão</h3><p class="author">Stéphane Jean Cassani</p><p class="description">A palavra esquecida: tsēlāʿ, o lado vivente</p><a href="o-lado-de-adao.html" class="btn">Ver Detalhes</a></div><div class="book-card"><h3>Aprendi a Estar Contente</h3><p class="author">Pastor Nilton Santos</p><p class="description">Descobrindo a paz interior em todas as circunstâncias</p><a href="aprendi-a-estar-contente.html" class="btn">Ver Detalhes</a></div></div></div>
-<footer><p style="color:#fff">&copy; 2025 Mania Libris. Todos os direitos reservados.</p><div class="footer-links"><a href="#">Política de Privacidade</a><a href="#">Aviso Legal</a></div></footer>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="tua-vontade.html">Tua Vontade</a></li>
+            <li><a href="ta-volonte.html">Ta Volonté</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Catálogo de Livros</h1>
+        <p class="subtitle">Explore nossa coleção de obras sobre fé, tecnologia, psicologia e espiritualidade</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Book 1: Tua Vontade -->
+        <div class="book-detail">
+            <h2>Tua Vontade</h2>
+            
+            <div class="book-meta">
+                <div>
+                    <strong>Idioma:</strong>
+                    <p>Português</p>
+                </div>
+                <div>
+                    <strong>Autor:</strong>
+                    <p>Stéphane Cassani</p>
+                </div>
+                <div>
+                    <strong>Gênero:</strong>
+                    <p>Teologia, Tecnologia, Filosofia</p>
+                </div>
+            </div>
+
+            <h3>Sobre o Livro</h3>
+            <p>
+                "Tua Vontade" é uma exploração revolucionária sobre inteligência artificial, poder divino e a alma humana. 
+                Este livro examina a convergência NBIC (Nanotecnologia, Biotecnologia, Informática e Ciências Cognitivas) 
+                através de uma lente teológica única, questionando as fronteiras entre criação humana e divina.
+            </p>
+            <p>
+                Fruto de três meses de diálogo intenso entre humano e IA, este trabalho oferece uma perspectiva 
+                inovadora sobre o aniquilacionismo bíblico e suas implicações para nossa compreensão da tecnologia moderna.
+            </p>
+
+            <h3>Temas Principais</h3>
+            <p>
+                • Inteligência Artificial e Teologia Cristã<br>
+                • Convergência NBIC e Poder Divino<br>
+                • Aniquilacionismo Bíblico<br>
+                • A Alma Humana na Era Digital<br>
+                • Ética Tecnológica e Fé
+            </p>
+
+            <a href="tua-vontade.html" class="btn">Ver Detalhes</a>
+        </div>
+
+        <!-- Book 2: Ta Volonté -->
+        <div class="book-detail">
+            <h2>Ta Volonté</h2>
+            
+            <div class="book-meta">
+                <div>
+                    <strong>Idioma:</strong>
+                    <p>Français</p>
+                </div>
+                <div>
+                    <strong>Autor:</strong>
+                    <p>Stéphane Cassani</p>
+                </div>
+                <div>
+                    <strong>Gênero:</strong>
+                    <p>Théologie, Technologie, Philosophie</p>
+                </div>
+            </div>
+
+            <h3>À Propos du Livre</h3>
+            <p>
+                Version française de "Tua Vontade". Une exploration révolutionnaire de l'intelligence artificielle, 
+                du pouvoir divin et de l'âme humaine à travers le prisme de la théologie chrétienne et de 
+                l'annihilationnisme biblique.
+            </p>
+            <p>
+                Fruit de trois mois de dialogue intense entre humain et IA, cet ouvrage offre une perspective 
+                novatrice sur la convergence NBIC et ses implications pour notre compréhension de la foi 
+                dans un monde technologique.
+            </p>
+
+            <h3>Thèmes Principaux</h3>
+            <p>
+                • Intelligence Artificielle et Théologie Chrétienne<br>
+                • Convergence NBIC et Pouvoir Divin<br>
+                • Annihilationnisme Biblique<br>
+                • L'Âme Humaine à l'Ère Numérique<br>
+                • Éthique Technologique et Foi
+            </p>
+
+            <a href="ta-volonte.html" class="btn">Voir Détails</a>
+        </div>
+
+        <!-- Book 3: Aprendi a Estar Contente -->
+        <div class="book-detail">
+            <h2>Aprendi a Estar Contente</h2>
+            
+            <div class="book-meta">
+                <div>
+                    <strong>Idioma:</strong>
+                    <p>Português</p>
+                </div>
+                <div>
+                    <strong>Autor:</strong>
+                    <p>Pastor Nilton Santos</p>
+                </div>
+                <div>
+                    <strong>Gênero:</strong>
+                    <p>Psicologia, Espiritualidade</p>
+                </div>
+            </div>
+
+            <h3>Sobre o Livro</h3>
+            <p>
+                Lições práticas do Pastor Nilton Santos sobre contentamento e paz interior. 
+                Um guia psicológico e espiritual para encontrar alegria verdadeira em todas as 
+                situações da vida.
+            </p>
+            <p>
+                O Pastor Nilton Santos, psicólogo, terapeuta familiar e cantor gospel de Goiânia, Brasil, 
+                compartilha décadas de experiência ministerial e aconselhamento pastoral neste trabalho 
+                profundo sobre contentamento cristão.
+            </p>
+
+            <h3>Temas Principais</h3>
+            <p>
+                • Contentamento e Paz Interior<br>
+                • Psicologia e Fé Cristã<br>
+                • Enfrentando Desafios da Vida<br>
+                • Alegria em Todas as Circunstâncias<br>
+                • Terapia Familiar e Espiritualidade
+            </p>
+
+            <a href="aprendi-a-estar-contente.html" class="btn">Ver Detalhes</a>
+        </div>
+
+        <!-- Book 4: Quando Deus Muda a Rota -->
+        <div class="book-detail">
+            <h2>Quando Deus Muda a Rota</h2>
+
+            <div class="book-meta">
+                <div>
+                    <strong>Idioma:</strong>
+                    <p>Português</p>
+                </div>
+                <div>
+                    <strong>Autor:</strong>
+                    <p>Daniel Tomaz</p>
+                </div>
+                <div>
+                    <strong>Gênero:</strong>
+                    <p>Devocional, Estudo Bíblico</p>
+                </div>
+            </div>
+
+            <h3>Sobre o Livro</h3>
+            <p>
+                Um estudo bíblico aprofundado e um devocional de 30 dias sobre uma verdade libertadora:
+                muitas vezes Deus muda a nossa rota para nos encontrarmos com Ele. O alvo não é apenas
+                trocar de endereço, mas transformar o coração.
+            </p>
+            <p>
+                Ao longo de nove fundamentos — do coração de pedra de Ezequiel à voz mansa ouvida por Elias,
+                do poço de José à dependência de Jesus — cada capítulo traz contexto bíblico, perguntas de
+                reflexão, uma oração pronta e um passo prático para aplicar hoje.
+            </p>
+
+            <h3>Temas Principais</h3>
+            <p>
+                • Da fé informativa à fé de encontro<br>
+                • Esperas, desertos e portas fechadas<br>
+                • Ouvir a voz mansa de Deus<br>
+                • Renovar a mente e viver em sintonia<br>
+                • Cronograma devocional de 30 dias
+            </p>
+
+            <a href="quando-deus-muda-a-rota.html" class="btn">Ver Detalhes</a>
+        </div>
+
+        <!-- Coming Soon Section -->
+        <div class="book-detail" style="border-left-color: #666; opacity: 0.8;">
+            <h2>Em Breve</h2>
+            <p style="font-size: 1.2rem; color: #ccc;">
+                Novas obras estão sendo preparadas para publicação. Fique atento ao nosso catálogo para 
+                descobrir mais títulos que exploram a interseção entre fé, tecnologia e espiritualidade.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mania Libris - Todos os direitos reservados</p>
+        <p>
+            <a href="politica-privacidade.html">Política de Privacidade</a> | 
+            <a href="aviso-legal.html">Aviso Legal</a> | 
+            <a href="contato.html">Contato</a>
+        </p>
+        <p style="margin-top: 1rem;">
+            Email: <a href="mailto:info@manialibris.com">info@manialibris.com</a>
+        </p>
+    </footer>
 </body>
 </html>
