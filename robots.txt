@@ -8,10 +8,13 @@ Allow: /
 Sitemap: https://manialibris.com/sitemap.xml
 
 # Bloquer les répertoires temporaires ou de développement (si présents)
-Disallow: /tmp/
-Disallow: /backup/
-Disallow: /old/
-Disallow: /_drafts/
+# Note : les règles ci-dessous sont des PRÉFIXES, sans slash final, afin de
+# couvrir aussi les variantes horodatées du type /backup_20251026_140310/
+Disallow: /tmp
+Disallow: /backup
+Disallow: /old
+Disallow: /_drafts
+Disallow: /manialibris-deployment-complete
 
 # Autoriser explicitement les pages principales
 Allow: /index.html
