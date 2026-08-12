@@ -185,7 +185,7 @@ git push origin main
 
 ### 1. Vérifier GitHub (immédiat)
 ```
-https://github.com/scassani1964/manialibris-website/commits/main
+https://github.com/global-opera/manialibris-website/commits/main
 ```
 Cherchez : "Correction des liens Amazon - Tous les ASIN corriges pour BR et FR"
 

@@ -25,7 +25,7 @@ if not exist "%REPO_FOLDER%" (
     echo.
     
     cd "%USERPROFILE%\Documents"
-    git clone https://github.com/scassani1964/manialibris-website.git
+    git clone https://github.com/global-opera/manialibris-website.git
     
     if not exist "%REPO_FOLDER%" (
         echo ERREUR : Le clonage a echoue

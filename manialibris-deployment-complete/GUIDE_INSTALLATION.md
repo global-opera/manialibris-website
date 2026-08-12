@@ -112,7 +112,7 @@ Après le push GitHub (attendre 1-2 minutes) :
 
 **1. GitHub (immédiat) :**
 ```
-https://github.com/scassani1964/manialibris-website/commits/main
+https://github.com/global-opera/manialibris-website/commits/main
 ```
 Vous devriez voir un nouveau commit : "Correction des liens Amazon - Tous les ASIN corriges pour BR et FR"
 
@@ -158,7 +158,7 @@ Testez tous les boutons Amazon sur :
 cd C:\Users\Stéphane CASSANI\Documents
 
 REM Si le repo n'existe pas encore
-git clone https://github.com/scassani1964/manialibris-website.git
+git clone https://github.com/global-opera/manialibris-website.git
 
 REM Si le repo existe déjà
 cd manialibris-website

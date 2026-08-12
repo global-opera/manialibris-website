@@ -8,7 +8,7 @@
 $REPO_PATH = "$HOME\manialibris-website"  # À adapter si nécessaire
 $DOWNLOAD_PATH = "$HOME\Downloads"
 $FILES_TO_DEPLOY = @("le-cote-adam.html", "o-lado-de-adao.html", "catalogo.html")
-$REPO_URL = "https://github.com/scassani1964/manialibris-website.git"
+$REPO_URL = "https://github.com/global-opera/manialibris-website.git"
 
 # COULEURS
 $SUCCESS = "Green"

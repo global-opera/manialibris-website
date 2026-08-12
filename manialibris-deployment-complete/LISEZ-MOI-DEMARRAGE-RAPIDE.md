@@ -187,7 +187,7 @@ Après le déploiement, attendez **2-3 minutes** puis testez :
 
 ### GitHub (immédiat)
 ```
-https://github.com/scassani1964/manialibris-website/commits/main
+https://github.com/global-opera/manialibris-website/commits/main
 ```
 Cherchez : "Correction des liens Amazon - Tous les ASIN corriges pour BR et FR"
 
@@ -297,7 +297,7 @@ Si vous rencontrez un problème :
 
 ## 🔗 LIENS UTILES
 
-- **Repository GitHub :** https://github.com/scassani1964/manialibris-website
+- **Repository GitHub :** https://github.com/global-opera/manialibris-website
 - **Dashboard Netlify :** https://app.netlify.com
 - **Site Live :** https://manialibris.com/
 - **Télécharger Git :** https://git-scm.com/download/win

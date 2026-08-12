@@ -336,7 +336,7 @@ Après exécution du script :
 - [ ] Backup créé (dossier backup_YYYYMMDD_HHMMSS)
 
 ### Vérifications GitHub (1 minute)
-- [ ] Commit visible : https://github.com/scassani1964/manialibris-website/commits/main
+- [ ] Commit visible : https://github.com/global-opera/manialibris-website/commits/main
 - [ ] Message de commit : "Correction des liens Amazon - Tous les ASIN corriges pour BR et FR"
 - [ ] 12 fichiers modifiés visibles
 
