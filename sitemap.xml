@@ -104,4 +104,21 @@
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/ta-volonte.html"/>
   </url>
 
+  <!-- L'ARBRE DE VIE - PAGE DU LIVRE -->
+  <url>
+    <loc>https://manialibris.com/arbre-de-vie/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- L'ARBRE DE VIE - MARQUE-PAGE CALENDRIER
+       Adresse imprimee dans le livre et dans son QR code : elle ne bouge pas. -->
+  <url>
+    <loc>https://manialibris.com/arbre-de-vie/calendrier</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
