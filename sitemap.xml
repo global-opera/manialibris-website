@@ -121,4 +121,21 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- A ARVORE DA VIDA - PAGINA DO LIVRO (edicao pt-BR) -->
+  <url>
+    <loc>https://manialibris.com/arvore-da-vida/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- A ARVORE DA VIDA - MARCADOR COM CALENDARIO
+       Endereco impresso no livro portugues e no seu QR: nao muda. -->
+  <url>
+    <loc>https://manialibris.com/arvore-da-vida/calendario</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
