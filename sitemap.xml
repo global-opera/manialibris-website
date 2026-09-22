@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
+
   <!-- PAGE D'ACCUEIL - VERSION PT (principale) -->
   <url>
     <loc>https://manialibris.com/index.html</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/index.html"/>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/index-fr.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://manialibris.com/index.html"/>
   </url>
-  
+
   <!-- PAGE D'ACCUEIL - VERSION FR -->
   <url>
     <loc>https://manialibris.com/index-fr.html</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/index.html"/>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/index-fr.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://manialibris.com/index.html"/>
   </url>
-  
+
   <!-- CATALOGUE - VERSION PT -->
   <url>
     <loc>https://manialibris.com/catalogo.html</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/catalogo.html"/>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/catalogue-fr.html"/>
   </url>
-  
+
   <!-- CATALOGUE - VERSION FR -->
   <url>
     <loc>https://manialibris.com/catalogue-fr.html</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/catalogo.html"/>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/catalogue-fr.html"/>
   </url>
-  
-  <!-- À PROPOS - VERSION PT -->
+
+  <!-- RESSOURCES - VERSION PT -->
   <url>
-    <loc>https://manialibris.com/sobre.html</loc>
-    <lastmod>2025-11-08</lastmod>
+    <loc>https://manialibris.com/recursos.html</loc>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/sobre.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/a-propos-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/recursos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/ressources.html"/>
   </url>
-  
-  <!-- À PROPOS - VERSION FR -->
+
+  <!-- RESSOURCES - VERSION FR -->
   <url>
-    <loc>https://manialibris.com/a-propos-fr.html</loc>
-    <lastmod>2025-11-08</lastmod>
+    <loc>https://manialibris.com/ressources.html</loc>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/sobre.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/a-propos-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/recursos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/ressources.html"/>
   </url>
-  
+
   <!-- CONTACT - VERSION PT -->
   <url>
     <loc>https://manialibris.com/contato.html</loc>
@@ -73,7 +73,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/contato.html"/>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/contact-fr.html"/>
   </url>
-  
+
   <!-- CONTACT - VERSION FR -->
   <url>
     <loc>https://manialibris.com/contact-fr.html</loc>
@@ -83,31 +83,73 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/contato.html"/>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/contact-fr.html"/>
   </url>
-  
-  <!-- PAGES DE LIVRES - VERSION PT -->
+
+  <!-- LIVRE : TUA VONTADE / TA VOLONTE -->
   <url>
     <loc>https://manialibris.com/tua-vontade.html</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/tua-vontade.html"/>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/ta-volonte.html"/>
   </url>
-  
-  <!-- PAGES DE LIVRES - VERSION FR -->
   <url>
     <loc>https://manialibris.com/ta-volonte.html</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/tua-vontade.html"/>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/ta-volonte.html"/>
   </url>
 
+  <!-- LIVRE : O LADO DE ADAO / LE COTE D'ADAM -->
+  <url>
+    <loc>https://manialibris.com/o-lado-de-adao.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/o-lado-de-adao.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/le-cote-d-adam.html"/>
+  </url>
+  <url>
+    <loc>https://manialibris.com/le-cote-d-adam.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/o-lado-de-adao.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/le-cote-d-adam.html"/>
+  </url>
+
+  <!-- LIVRE : APRENDI A ESTAR CONTENTE / J'AI APPRIS A ETRE CONTENT -->
+  <url>
+    <loc>https://manialibris.com/aprendi-a-estar-contente.html</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/aprendi-a-estar-contente.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/jai-appris-a-etre-content.html"/>
+  </url>
+  <url>
+    <loc>https://manialibris.com/jai-appris-a-etre-content.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/aprendi-a-estar-contente.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/jai-appris-a-etre-content.html"/>
+  </url>
+
+  <!-- LIVRE : O FIO OCULTO DA HISTORIA (edition PT ; l'edition FR n'a pas de page dediee) -->
+  <url>
+    <loc>https://manialibris.com/o-fio-oculto.html</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- L'ARBRE DE VIE - PAGE DU LIVRE -->
   <url>
     <loc>https://manialibris.com/arbre-de-vie/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -151,6 +193,42 @@
     <lastmod>2026-09-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- PAGES LEGALES - PT -->
+  <url>
+    <loc>https://manialibris.com/politica-privacidade.html</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/politica-privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/politique-confidentialite.html"/>
+  </url>
+  <url>
+    <loc>https://manialibris.com/aviso-legal.html</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/mentions-legales.html"/>
+  </url>
+
+  <!-- PAGES LEGALES - FR -->
+  <url>
+    <loc>https://manialibris.com/politique-confidentialite.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/politica-privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/politique-confidentialite.html"/>
+  </url>
+  <url>
+    <loc>https://manialibris.com/mentions-legales.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/mentions-legales.html"/>
   </url>
 
 </urlset>

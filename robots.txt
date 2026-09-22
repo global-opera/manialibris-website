@@ -21,8 +21,6 @@ Allow: /index.html
 Allow: /index-fr.html
 Allow: /catalogo.html
 Allow: /catalogue-fr.html
-Allow: /sobre.html
-Allow: /a-propos-fr.html
 Allow: /contato.html
 Allow: /contact-fr.html
 
