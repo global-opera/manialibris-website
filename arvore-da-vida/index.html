@@ -10,8 +10,6 @@
      esta pagina apresenta o livro, e so depois leva ao calendario.
      O QR DO LIVRO leva a /arvore-da-vida/calendario.
      OS DOIS ENDERECOS FICAM CONGELADOS a partir da impressao. -->
-<!-- A COMPLETAR APOS A PUBLICACAO KDP : colocar os ASIN (procurar ASIN_BROCHURA
-     e ASIN_KINDLE) e retirar a classe "attente" dos dois botoes. -->
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Georgia,serif;background:#000;color:#fff;line-height:1.6}
@@ -88,15 +86,20 @@ footer{background:#000;border-top:2px solid #DAA520;padding:40px 0;margin-top:80
     e recomeçado.</p>
 
     <div class="achat">
-      <!-- ASIN_BROCHURA — colocar o href e retirar class="attente" -->
-      <a class="btn attente" href="#">Brochura — em breve</a>
-      <!-- ASIN_KINDLE — link em /dp/ASIN sem parametro -->
-      <a class="btn attente" href="#">Kindle — em breve</a>
+      <!-- ASIN_BROCHURA = B0HKLVGW6T, publicado em 21.09.2026. O KDP nao imprime
+           para a Amazon.com.br : a brochura so existe nas lojas estrangeiras,
+           dai o link para a Amazon.com (entrega internacional). -->
+      <a class="btn" href="https://www.amazon.com/dp/B0HKLVGW6T">Comprar a brochura</a>
+      <!-- ASIN_KINDLE = B0HKLHDJLD, publicado em 21.09.2026, loja principal
+           Amazon.com.br. Link em /dp/ASIN sem parametro. -->
+      <a class="btn" href="https://www.amazon.com.br/dp/B0HKLHDJLD">Ler no Kindle</a>
     </div>
     <p class="note">O marcador de páginas com o calendário é gratuito nos dois casos.</p>
 
     <ul class="fiche">
       <li><span>Formato</span><span>152 × 229 mm, 210 páginas</span></li>
+      <li><span>Kindle</span><span>ASIN B0HKLHDJLD</span></li>
+      <li><span>Brochura</span><span>ISBN 9798176227239</span></li>
       <li><span>Texto bíblico</span><span>Bíblia Livre, CC BY 3.0 BR</span></li>
       <li><span>Editora</span><span>Éditions Mania Libris</span></li>
     </ul>
