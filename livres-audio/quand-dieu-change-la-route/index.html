@@ -43,6 +43,7 @@
   <p>Laissez votre adresse : vous recevrez un message quand un nouveau livre audio paraît, et rien d’autre. Une ligne suffit pour vous désinscrire. Le téléchargement reste libre, sans inscription.</p>
   <form name="nouveautes-fr" method="POST" action="/merci/" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="nouveautes-fr">
+    <input type="hidden" name="subject" value="Inscription FR aux livres audio — %{submissionId}">
     <input type="hidden" name="page" value="livres-audio/quand-dieu-change-la-route">
     <p class="piege" aria-hidden="true"><label>Ne remplissez pas ce champ : <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
     <div>
