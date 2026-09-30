@@ -1,46 +1,27 @@
 # robots.txt pour Mania Libris
 # Maison d'édition théologique bilingue PT/FR
+#
+# Un seul groupe User-agent, volontairement : un robot n'obéit qu'au groupe
+# le plus spécifique qui le concerne. Des blocs « User-agent: Googlebot »
+# suivis de « Allow: / » annuleraient pour Google toutes les règles
+# Disallow écrites ci-dessous.
 
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://manialibris.com/sitemap.xml
-
-# Bloquer les répertoires temporaires ou de développement (si présents)
-# Note : les règles ci-dessous sont des PRÉFIXES, sans slash final, afin de
-# couvrir aussi les variantes horodatées du type /backup_20251026_140310/
+# Répertoires temporaires ou de travail, si jamais il en apparaît un jour.
+# Ce sont des PRÉFIXES, sans slash final, afin de couvrir aussi les
+# variantes horodatées du type /backup_20251026_140310/
 Disallow: /tmp
 Disallow: /backup
 Disallow: /old
 Disallow: /_drafts
-Disallow: /manialibris-deployment-complete
 
-# Autoriser explicitement les pages principales
-Allow: /index.html
-Allow: /index-fr.html
-Allow: /catalogo.html
-Allow: /catalogue-fr.html
-Allow: /contato.html
-Allow: /contact-fr.html
-
-# Autoriser les images
-Allow: /images/
-
-# Bloquer les fichiers système (si présents)
+# Fichiers système, si jamais l'un d'eux se glissait dans le dépôt
 Disallow: /.git/
 Disallow: /.DS_Store
 Disallow: /thumbs.db
+Disallow: /desktop.ini
 
-# Crawl-delay pour respecter les serveurs (optionnel)
-# Crawl-delay: 1
-
-# Instructions spécifiques pour les principaux bots
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
+# Sitemap
+Sitemap: https://manialibris.com/sitemap.xml

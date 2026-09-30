@@ -1,0 +1,10 @@
+# Fichiers systeme Windows / OneDrive / macOS : jamais publies.
+# desktop.ini reste sur le disque (il porte l'icone du dossier OneDrive),
+# mais il n'a rien a faire sur le site.
+desktop.ini
+Desktop.ini
+Thumbs.db
+thumbs.db
+ehthumbs.db
+.DS_Store
+._*
