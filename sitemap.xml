@@ -47,7 +47,7 @@
   <!-- RESSOURCES - VERSION PT -->
   <url>
     <loc>https://manialibris.com/recursos.html</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/recursos.html"/>
@@ -57,7 +57,7 @@
   <!-- RESSOURCES - VERSION FR -->
   <url>
     <loc>https://manialibris.com/ressources.html</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/recursos.html"/>
@@ -231,10 +231,84 @@
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/mentions-legales.html"/>
   </url>
 
-  <!-- L'ARBRE DE VIE - LIVRE AUDIO -->
+  <!-- LIVRES AUDIO / AUDIOLIVROS - PAGES D'ACCUEIL -->
+  <url>
+    <loc>https://manialibris.com/audiolivros/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/audiolivros/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/livres-audio/"/>
+  </url>
+
+  <url>
+    <loc>https://manialibris.com/livres-audio/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/audiolivros/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/livres-audio/"/>
+  </url>
+
+  <!-- LIVRES AUDIO / AUDIOLIVROS - UN LIVRE PAR PAGE -->
+  <url>
+    <loc>https://manialibris.com/audiolivros/a-arvore-da-vida/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/audiolivros/a-arvore-da-vida/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/livres-audio/l-arbre-de-vie/"/>
+  </url>
+
   <url>
     <loc>https://manialibris.com/livres-audio/l-arbre-de-vie/</loc>
     <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/audiolivros/a-arvore-da-vida/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/livres-audio/l-arbre-de-vie/"/>
+  </url>
+
+  <url>
+    <loc>https://manialibris.com/audiolivros/o-lado-de-adao/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/audiolivros/o-lado-de-adao/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/livres-audio/le-cote-d-adam/"/>
+  </url>
+
+  <url>
+    <loc>https://manialibris.com/livres-audio/le-cote-d-adam/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/audiolivros/o-lado-de-adao/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/livres-audio/le-cote-d-adam/"/>
+  </url>
+
+  <url>
+    <loc>https://manialibris.com/audiolivros/aprendi-a-estar-contente/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/audiolivros/aprendi-a-estar-contente/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/livres-audio/jai-appris-a-etre-content/"/>
+  </url>
+
+  <url>
+    <loc>https://manialibris.com/livres-audio/jai-appris-a-etre-content/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/audiolivros/aprendi-a-estar-contente/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/livres-audio/jai-appris-a-etre-content/"/>
+  </url>
+
+  <!-- Ce titre n'existe qu'en francais : pas d'equivalent portugais. -->
+  <url>
+    <loc>https://manialibris.com/livres-audio/quand-dieu-change-la-route/</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
