@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vinte e duas promessas bíblicas, organizadas pelos doze frutos de A Árvore da Vida: um versículo, uma meditação, uma oração. Texto da Bíblia Livre.">
+<title>As Promessas de Deus | Mania Libris</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+ background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;
+ color:#333;line-height:1.6}
+.container{max-width:1100px;margin:0 auto;padding:28px 20px 60px}
+nav{display:flex;gap:26px;justify-content:center;margin-bottom:26px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;opacity:.9;font-size:.98rem}
+nav a:hover{opacity:1;text-decoration:underline}
+header{text-align:center;color:#fff;margin-bottom:26px}
+h1{font-size:2.5rem;margin-bottom:10px;text-wrap:balance}
+header p{font-size:1.08rem;opacity:.93;max-width:60ch;margin:0 auto}
+header .compte{font-size:.94rem;opacity:.78;margin-top:8px;font-variant-numeric:tabular-nums}
+.recherche{background:#fff;border-radius:14px;padding:18px 20px;margin-bottom:22px;
+ box-shadow:0 8px 28px rgba(0,0,0,.16);display:flex;gap:14px;align-items:center;
+ flex-wrap:wrap}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.recherche input{flex:1;min-width:220px;font:inherit;font-size:1.02rem;color:#333;
+ border:2px solid #e6e4f0;border-radius:9px;padding:11px 15px}
+.recherche input:focus{border-color:#764ba2;outline:none}
+.recherche .compte-res{color:#764ba2;font-variant-numeric:tabular-nums;white-space:nowrap}
+.recherche button{font:inherit;background:transparent;color:#764ba2;border:2px solid #764ba2;
+ border-radius:9px;padding:9px 18px;cursor:pointer}
+.recherche button:hover{background:#f3f0fa}
+.fruit{background:#fff;border-radius:16px;padding:24px 26px;margin-bottom:20px;
+ box-shadow:0 8px 28px rgba(0,0,0,.16)}
+.fruit[hidden]{display:none}
+.fruit-tete{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid #f0eef7;
+ padding-bottom:12px;margin-bottom:18px;flex-wrap:wrap}
+.fruit-icone{font-size:1.3rem}
+.fruit-nom{font-size:1.2rem;color:#764ba2}
+.fruit-sous{color:#8d87a5;font-size:.94rem}
+.grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:15px}
+.promesse{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border:0;
+ border-radius:12px;padding:18px;text-align:left;font:inherit;cursor:pointer;
+ transition:transform .2s,box-shadow .2s}
+.promesse:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(118,75,162,.4)}
+.promesse[hidden]{display:none}
+.promesse .cat{display:block;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;
+ opacity:.82;margin-bottom:7px}
+.promesse .th{display:block;font-weight:600;font-size:1rem;margin-bottom:6px}
+.promesse .rf{display:block;font-size:.85rem;opacity:.85}
+.rien{background:#fff;border-radius:16px;padding:30px;text-align:center;color:#764ba2;
+ box-shadow:0 8px 28px rgba(0,0,0,.16)}
+.rien[hidden]{display:none}
+.detail{display:none}
+.detail.on{display:block}
+.vue[hidden]{display:none}
+.retour{background:#fff;color:#764ba2;border:0;border-radius:10px;padding:11px 22px;
+ font:inherit;font-weight:600;cursor:pointer;margin-bottom:18px;
+ box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.retour:hover{background:#f3f0fa}
+.fiche{background:#fff;border-radius:16px;padding:30px 32px;box-shadow:0 8px 28px rgba(0,0,0,.16)}
+.fiche .cat{color:#8d87a5;font-size:.8rem;letter-spacing:.09em;text-transform:uppercase}
+.fiche h2{font-size:1.75rem;color:#764ba2;margin:6px 0 20px;line-height:1.25}
+.verset{background:#f8f9fa;border-left:4px solid #667eea;border-radius:8px;
+ padding:18px 20px;margin-bottom:24px}
+.verset .rf{color:#764ba2;font-weight:600;margin-bottom:6px}
+.fiche h3{font-size:.82rem;letter-spacing:.11em;text-transform:uppercase;color:#764ba2;
+ margin-bottom:8px}
+.fiche .med{margin-bottom:24px;max-width:70ch}
+.fiche .pri{background:#f6f3fc;border-radius:8px;padding:18px 20px;font-style:italic;
+ color:#4a3f66;margin-bottom:22px}
+.mots{display:flex;gap:8px;flex-wrap:wrap}
+.mots button{font:inherit;font-size:.86rem;background:#f3f0fa;color:#764ba2;border:0;
+ border-radius:30px;padding:5px 14px;cursor:pointer}
+.mots button:hover{background:#e6e0f5}
+.source{color:#999;font-size:.88rem;margin-top:22px}
+.source a{color:#764ba2}
+.haut{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border:0;border-radius:50%;
+ background:#fff;color:#764ba2;font-size:1.2rem;cursor:pointer;
+ box-shadow:0 6px 18px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s}
+.haut.on{opacity:1;pointer-events:auto}
+footer{text-align:center;color:#fff;opacity:.82;font-size:.9rem;margin-top:16px}
+footer .fl{display:flex;gap:24px;justify-content:center;margin-top:10px}
+footer a{color:#fff}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #fff;
+ outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.promesse,.haut{transition:none}
+ .promesse:hover{transform:none}}
+@media (max-width:620px){.container{padding:20px 14px 50px}h1{font-size:1.9rem}
+ .fruit,.fiche{padding:20px 18px}.grille{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<nav>
+  <a href="../../index.html">Início</a>
+  <a href="../../catalogo.html">Catálogo</a>
+  <a href="../../recursos.html">Recursos</a>
+</nav>
+
+<header id="top">
+  <h1>As Promessas de Deus</h1>
+  <p>Vinte e duas promessas, uma para cada situação — com a sua meditação e a sua oração</p>
+  <p class="compte">12 frutos · 22 promessas</p>
+</header>
+
+<div class="recherche">
+  <label for="q" class="sr">Pesquisar: alegria, paz, perdão, força, refúgio…</label>
+  <input id="q" type="search" placeholder="Pesquisar: alegria, paz, perdão, força, refúgio…" autocomplete="off">
+  <span class="compte-res" id="compte-res"></span>
+  <button type="button" id="tout">Ver tudo</button>
+</div>
+
+<div id="liste" class="vue">
+  <section class="fruit">
+    <div class="fruit-tete"><span class="fruit-icone">📖</span><h2 class="fruit-nom">A Palavra</h2><span class="fruit-sous">Deus falou. Tudo parte daí.</span></div>
+    <div class="grille">
+      <button class="promesse" data-n="9"><span class="cat">Direção & Sabedoria</span><span class="th">Confie no SENHOR</span><span class="rf">Provérbios 3:5-6</span></button>
+      <button class="promesse" data-n="16"><span class="cat">Sabedoria & Direção</span><span class="th">Peça sabedoria, e ela lhe será dada</span><span class="rf">Tiago 1:5</span></button>
+    </div>
+  </section>
+  <section class="fruit">
+    <div class="fruit-tete"><span class="fruit-icone">🤝</span><h2 class="fruit-nom">A confiança</h2><span class="fruit-sous">Apoiar-se no que foi dito.</span></div>
+    <div class="grille">
+      <button class="promesse" data-n="6"><span class="cat">Provisão & Confiança</span><span class="th">Não se inquiete, o seu Pai provê</span><span class="rf">Mateus 6:25-26</span></button>
+    </div>
+  </section>
+  <section class="fruit">
+    <div class="fruit-tete"><span class="fruit-icone">🕊️</span><h2 class="fruit-nom">O perdão</h2><span class="fruit-sous">O que desata e põe de pé outra vez.</span></div>
+    <div class="grille">
+      <button class="promesse" data-n="7"><span class="cat">Perdão & Cura</span><span class="th">Ele perdoa e purifica</span><span class="rf">1 João 1:9</span></button>
+    </div>
+  </section>
+  <section class="fruit">
+    <div class="fruit-tete"><span class="fruit-icone">🌱</span><h2 class="fruit-nom">A vida nova</h2><span class="fruit-sous">O que recomeça.</span></div>
+    <div class="grille">
+      <button class="promesse" data-n="8"><span class="cat">Transformação</span><span class="th">Você é uma nova criatura</span><span class="rf">2 Coríntios 5:17</span></button>
+      <button class="promesse" data-n="14"><span class="cat">Liberdade & Libertação</span><span class="th">A verdadeira liberdade em Cristo</span><span class="rf">João 8:36</span></button>
+      <button class="promesse" data-n="15"><span class="cat">Vida Eterna</span><span class="th">Deus amou o mundo de tal maneira</span><span class="rf">João 3:16</span></button>
+    </div>
+  </section>
+  <section class="fruit">
+    <div class="fruit-tete"><span class="fruit-icone">🙏</span><h2 class="fruit-nom">A oração</h2><span class="fruit-sous">Falar com quem falou.</span></div>
+    <div class="grille">
+      <button class="promesse" data-n="10"><span class="cat">Oração & Resposta</span><span class="th">Peça e você receberá</span><span class="rf">Mateus 7:7-8</span></button>
+    </div>
+  </section>
+  <section class="fruit">
+    <div class="fruit-tete"><span class="fruit-icone">🚶</span><h2 class="fruit-nom">A caminhada</h2><span class="fruit-sous">Pôr em prática, avançar.</span></div>
+    <div class="grille">
+      <button class="promesse" data-n="13"><span class="cat">Força & Coragem</span><span class="th">Tudo posso naquele que me fortalece</span><span class="rf">Filipenses 4:13</span></button>
+      <button class="promesse" data-n="18"><span class="cat">Vitória & Libertação</span><span class="th">Deus nos dá a vitória</span><span class="rf">1 Coríntios 15:57</span></button>
+    </div>
+  </section>
+  <section class="fruit">
+    <div class="fruit-tete"><span class="fruit-icone">☀️</span><h2 class="fruit-nom">A presença</h2><span class="fruit-sous">Ele está onde quer que eu vá.</span></div>
+    <div class="grille">
+      <button class="promesse" data-n="2"><span class="cat">Alegria & Plenitude</span><span class="th">Que a sua alegria seja completa</span><span class="rf">João 15:11</span></button>
+      <button class="promesse" data-n="3"><span class="cat">Alegria & Presença</span><span class="th">Na tua presença há plenitude de alegria</span><span class="rf">Salmos 16:11</span></button>
+      <button class="promesse" data-n="5"><span class="cat">Amor de Deus</span><span class="th">Nada pode separar você do amor de Deus</span><span class="rf">Romanos 8:38-39</span></button>
+    </div>
+  </section>
+  <section class="fruit">
+    <div class="fruit-tete"><span class="fruit-icone">🛏️</span><h2 class="fruit-nom">O descanso</h2><span class="fruit-sous">Parar, receber sem produzir.</span></div>
+    <div class="grille">
+      <button class="promesse" data-n="12"><span class="cat">Paz & Tranquilidade</span><span class="th">A paz que excede todo o entendimento</span><span class="rf">Filipenses 4:6-7</span></button>
+      <button class="promesse" data-n="17"><span class="cat">Descanso & Convite</span><span class="th">Venham a mim, e eu lhes darei descanso</span><span class="rf">Mateus 11:28</span></button>
+    </div>
+  </section>
+  <section class="fruit">
+    <div class="fruit-tete"><span class="fruit-icone">🗣️</span><h2 class="fruit-nom">O testemunho</h2><span class="fruit-sous">Devolver o que se recebeu.</span></div>
+    <div class="grille">
+      <button class="promesse" data-n="21"><span class="cat">Testemunho & Poder</span><span class="th">Vocês serão minhas testemunhas</span><span class="rf">Atos 1:8</span></button>
+    </div>
+  </section>
+  <section class="fruit">
+    <div class="fruit-tete"><span class="fruit-icone">⛰️</span><h2 class="fruit-nom">A provação</h2><span class="fruit-sous">Perseverar quando tudo resiste.</span></div>
+    <div class="grille">
+      <button class="promesse" data-n="1"><span class="cat">Alegria & Força</span><span class="th">A alegria do SENHOR é a sua força</span><span class="rf">Neemias 8:10</span></button>
+      <button class="promesse" data-n="4"><span class="cat">Força & Refúgio</span><span class="th">Deus é o seu refúgio e a sua força</span><span class="rf">Salmos 46:1</span></button>
+      <button class="promesse" data-n="19"><span class="cat">Proteção & Segurança</span><span class="th">Os seus anjos guardam você</span><span class="rf">Salmos 91:11</span></button>
+    </div>
+  </section>
+  <section class="fruit">
+    <div class="fruit-tete"><span class="fruit-icone">⚓</span><h2 class="fruit-nom">A esperança</h2><span class="fruit-sous">O que permanece.</span></div>
+    <div class="grille">
+      <button class="promesse" data-n="11"><span class="cat">Esperança & Futuro</span><span class="th">Deus tem um plano para você</span><span class="rf">Jeremias 29:11</span></button>
+      <button class="promesse" data-n="20"><span class="cat">Esperança & Ressurreição</span><span class="th">Uma esperança viva</span><span class="rf">1 Pedro 1:3-4</span></button>
+    </div>
+  </section>
+  <section class="fruit">
+    <div class="fruit-tete"><span class="fruit-icone">🕯️</span><h2 class="fruit-nom">A luz</h2><span class="fruit-sous">Ele vem.</span></div>
+    <div class="grille">
+      <button class="promesse" data-n="22"><span class="cat">Luz & Vida</span><span class="th">Eu sou a luz do mundo</span><span class="rf">João 8:12</span></button>
+    </div>
+  </section>
+<div class="rien" id="rien" hidden>Nenhuma promessa responde a esta palavra.</div>
+</div>
+
+<div id="detail" class="detail">
+  <button class="retour" id="retour">&larr; Voltar às promessas</button>
+  <div class="fiche">
+    <span class="cat" id="f-cat"></span>
+    <h2 id="f-theme"></h2>
+    <div class="verset"><div class="rf" id="f-ref"></div><div id="f-texte"></div></div>
+    <h3>Meditação</h3>
+    <p class="med" id="f-med"></p>
+    <h3>Oração</h3>
+    <p class="pri" id="f-pri"></p>
+    <div class="mots" id="f-mots"></div>
+    <p class="source">Texto bíblico: <strong>Bíblia Livre</strong>, CC BY 3.0 BR — © Diego Santos, Mario Sérgio e Marco Teles.</p>
+  </div>
+</div>
+
+<footer>
+  <p>Os doze frutos são os de <a href="../../arvore-da-vida/"><em>A Árvore da Vida</em></a>, um fruto por mês, trezentas e sessenta e cinco folhas.</p>
+  <p style="margin-top:14px">&copy; 2025 Mania Libris. Todos os direitos reservados.</p>
+  <div class="fl"><a href="../../politica-privacidade.html">Política de Privacidade</a><a href="../../aviso-legal.html">Aviso Legal</a></div>
+</footer>
+</div>
+
+<button class="haut" id="haut" aria-label="Topo da página">&uarr;</button>
+<script>
+const P = {"9": {"categorie": "Direção & Sabedoria", "theme": "Confie no SENHOR", "reference": "Provérbios 3:5-6", "texte": "Confia no SENHOR com todo o teu coração; e não te apoies em teu próprio entendimento. Dá reconhecimento a ele em todas os teus caminhos; e ele endireitará tuas veredas.", "meditation": "Há momentos na vida em que a gente realmente não sabe o que fazer. Já vivi isso. E a tentação está sempre ali: analisar, calcular, controlar tudo. Mas a Palavra diz: confie de TODO o seu coração. Não pela metade. Não guardando o controle de um lado. Todo. Quando aprendi a fazer isso — a soltar de verdade — vi Deus endireitar caminhos que eu jamais teria imaginado. Reconheça-o na decisão desta semana.", "priere": "« Senhor, entrego-te esta situação de todo o meu coração. Guia os meus passos, endireita o meu caminho. » Amém.", "mots": ["confiança", "direção", "entendimento", "sabedoria", "vereda", "controle", "decisão"], "index": "direcao & sabedoria confie no senhor proverbios 3:5-6 confia no senhor com todo o teu coracao; e nao te apoies em teu proprio entendimento. da reconhecimento a ele em todas os teus caminhos; e ele endireitara tuas veredas. ha momentos na vida em que a gente realmente nao sabe o que fazer. ja vivi isso. e a tentacao esta sempre ali: analisar, calcular, controlar tudo. mas a palavra diz: confie de todo o seu coracao. nao pela metade. nao guardando o controle de um lado. todo. quando aprendi a fazer isso — a soltar de verdade — vi deus endireitar caminhos que eu jamais teria imaginado. reconheca-o na decisao desta semana. « senhor, entrego-te esta situacao de todo o meu coracao. guia os meus passos, endireita o meu caminho. » amem. a palavra deus falou. tudo parte dai. confianca direcao entendimento sabedoria vereda controle decisao"}, "16": {"categorie": "Sabedoria & Direção", "theme": "Peça sabedoria, e ela lhe será dada", "reference": "Tiago 1:5", "texte": "Se algum de vós tem falta de sabedoria, peça a Deus, que concede generosamente a todos sem repreender, e lhe será dada.", "meditation": "Liberalmente. Sem repreender. Duas expressões que me tocaram. Deus não lhe diz: você de novo? Devia ter pensado antes. Ele dá liberalmente, sem fazer você se sentir tolo por precisar de sabedoria. Vivi situações complexas em que eu realmente não sabia o que fazer. A oração por sabedoria — simples, direta — mudou a minha perspectiva. Esta semana, se você está diante de uma decisão difícil, peça. Ele dará.", "priere": "« Senhor, falta-me sabedoria para esta situação. Prometeste dar sem repreender. Peço agora a tua sabedoria. » Amém.", "mots": ["sabedoria", "pedido", "decisão", "direção", "sem repreender", "generosidade", "perspectiva"], "index": "sabedoria & direcao peca sabedoria, e ela lhe sera dada tiago 1:5 se algum de vos tem falta de sabedoria, peca a deus, que concede generosamente a todos sem repreender, e lhe sera dada. liberalmente. sem repreender. duas expressoes que me tocaram. deus nao lhe diz: voce de novo? devia ter pensado antes. ele da liberalmente, sem fazer voce se sentir tolo por precisar de sabedoria. vivi situacoes complexas em que eu realmente nao sabia o que fazer. a oracao por sabedoria — simples, direta — mudou a minha perspectiva. esta semana, se voce esta diante de uma decisao dificil, peca. ele dara. « senhor, falta-me sabedoria para esta situacao. prometeste dar sem repreender. peco agora a tua sabedoria. » amem. a palavra deus falou. tudo parte dai. sabedoria pedido decisao direcao sem repreender generosidade perspectiva"}, "6": {"categorie": "Provisão & Confiança", "theme": "Não se inquiete, o seu Pai provê", "reference": "Mateus 6:25-26", "texte": "Por isso vos digo: não andeis ansiosos por vossa vida, sobre o que haveis de comer, ou que haveis de beber; nem por vosso corpo, sobre com que vos haveis de vestir. Não é a vida mais que o alimento, e o corpo mais que a roupa? Olhai para as aves do céu, que não semeiam, nem ceifam, nem ajuntam em celeiros; e contudo vosso Pai celestial as alimenta. Não sois vós muito mais importantes que elas?", "meditation": "A inquietação. Todos a conhecemos. Ela se instala de noite, corrói os pensamentos, paralisa as decisões. Jesus não diz que os nossos problemas não são reais. Ele diz: olhe como o seu Pai cuida das aves. E você vale muito mais do que uma ave. Aprendi — às vezes de forma dolorosa — que a inquietação não resolve nada, mas a confiança muda tudo. Entregue a sua situação a Deus esta semana, concretamente, em oração.", "priere": "« Pai, deponho diante de ti as minhas inquietações. Tu conheces as minhas necessidades. Eu confio em ti. » Amém.", "mots": ["inquietação", "provisão", "confiança", "Pai", "aves", "alimento", "cuidado"], "index": "provisao & confianca nao se inquiete, o seu pai prove mateus 6:25-26 por isso vos digo: nao andeis ansiosos por vossa vida, sobre o que haveis de comer, ou que haveis de beber; nem por vosso corpo, sobre com que vos haveis de vestir. nao e a vida mais que o alimento, e o corpo mais que a roupa? olhai para as aves do ceu, que nao semeiam, nem ceifam, nem ajuntam em celeiros; e contudo vosso pai celestial as alimenta. nao sois vos muito mais importantes que elas? a inquietacao. todos a conhecemos. ela se instala de noite, corroi os pensamentos, paralisa as decisoes. jesus nao diz que os nossos problemas nao sao reais. ele diz: olhe como o seu pai cuida das aves. e voce vale muito mais do que uma ave. aprendi — as vezes de forma dolorosa — que a inquietacao nao resolve nada, mas a confianca muda tudo. entregue a sua situacao a deus esta semana, concretamente, em oracao. « pai, deponho diante de ti as minhas inquietacoes. tu conheces as minhas necessidades. eu confio em ti. » amem. a confianca apoiar-se no que foi dito. inquietacao provisao confianca pai aves alimento cuidado"}, "7": {"categorie": "Perdão & Cura", "theme": "Ele perdoa e purifica", "reference": "1 João 1:9", "texte": "Se confessarmos nossos pecados, ele é fiel e justo para nos perdoar os pecados e nos purificar de toda injustiça.", "meditation": "A culpa é uma das correntes mais pesadas que o ser humano carrega. Sou testemunha disso. Mas esta promessa diz algo radical: basta reconhecer. Não se flagelar. Não carregar a vergonha indefinidamente. Apenas reconhecer, com honestidade, diante de Deus. E ele — fiel e justo — perdoa e purifica. Por inteiro. Esta semana, se você carrega algo pesado, venha a ele com essa honestidade. A liberdade espera por você.", "priere": "« Senhor, reconheço as minhas faltas diante de ti. Obrigado pelo teu perdão completo. Purifica o meu coração. » Amém.", "mots": ["perdão", "purificação", "pecado", "culpa", "vergonha", "liberdade", "fidelidade"], "index": "perdao & cura ele perdoa e purifica 1 joao 1:9 se confessarmos nossos pecados, ele e fiel e justo para nos perdoar os pecados e nos purificar de toda injustica. a culpa e uma das correntes mais pesadas que o ser humano carrega. sou testemunha disso. mas esta promessa diz algo radical: basta reconhecer. nao se flagelar. nao carregar a vergonha indefinidamente. apenas reconhecer, com honestidade, diante de deus. e ele — fiel e justo — perdoa e purifica. por inteiro. esta semana, se voce carrega algo pesado, venha a ele com essa honestidade. a liberdade espera por voce. « senhor, reconheco as minhas faltas diante de ti. obrigado pelo teu perdao completo. purifica o meu coracao. » amem. o perdao o que desata e poe de pe outra vez. perdao purificacao pecado culpa vergonha liberdade fidelidade"}, "8": {"categorie": "Transformação", "theme": "Você é uma nova criatura", "reference": "2 Coríntios 5:17", "texte": "Portanto, se alguém está em Cristo, uma nova criatura é ; as coisas velhas já passaram, eis que tudo se fez novo.", "meditation": "O seu passado não define o seu futuro. Esta verdade mudou a minha vida. Em Cristo, você já não é escravo dos velhos hábitos, das feridas, dos fracassos. Tudo se fez novo — e não é uma fórmula mágica, é uma realidade que se vive dia após dia, permanecendo ligado a ele. Esta semana, recuse-se a se definir pelo que você era. Você é uma nova criatura. Viva como tal.", "priere": "« Senhor, obrigado por fazer novas todas as coisas. Ajuda-me a viver esta semana na minha nova identidade em ti. » Amém.", "mots": ["transformação", "nova criatura", "passado", "identidade", "novo", "liberdade", "hábitos"], "index": "transformacao voce e uma nova criatura 2 corintios 5:17 portanto, se alguem esta em cristo, uma nova criatura e ; as coisas velhas ja passaram, eis que tudo se fez novo. o seu passado nao define o seu futuro. esta verdade mudou a minha vida. em cristo, voce ja nao e escravo dos velhos habitos, das feridas, dos fracassos. tudo se fez novo — e nao e uma formula magica, e uma realidade que se vive dia apos dia, permanecendo ligado a ele. esta semana, recuse-se a se definir pelo que voce era. voce e uma nova criatura. viva como tal. « senhor, obrigado por fazer novas todas as coisas. ajuda-me a viver esta semana na minha nova identidade em ti. » amem. a vida nova o que recomeca. transformacao nova criatura passado identidade novo liberdade habitos"}, "14": {"categorie": "Liberdade & Libertação", "theme": "A verdadeira liberdade em Cristo", "reference": "João 8:36", "texte": "Portanto, se o Filho vos libertar, verdadeiramente sereis livres.", "meditation": "Há liberdades aparentes que são prisões disfarçadas. E há a liberdade que só Cristo dá — real, profunda, duradoura. Sou testemunha disso. Correntes que eu carregava havia anos foram quebradas no momento em que entreguei de verdade aquela área da minha vida a Jesus. Não uma liberdade de fazer o que se quer — mas a liberdade de ser quem se é de verdade, em Cristo. Que corrente você ainda carrega esta semana? Ela pode ser quebrada.", "priere": "« Senhor Jesus, liberta-me de tudo o que me acorrenta. Recebo hoje a tua verdadeira liberdade. » Amém.", "mots": ["liberdade", "libertação", "correntes", "Cristo", "prisão", "quebrada", "identidade"], "index": "liberdade & libertacao a verdadeira liberdade em cristo joao 8:36 portanto, se o filho vos libertar, verdadeiramente sereis livres. ha liberdades aparentes que sao prisoes disfarcadas. e ha a liberdade que so cristo da — real, profunda, duradoura. sou testemunha disso. correntes que eu carregava havia anos foram quebradas no momento em que entreguei de verdade aquela area da minha vida a jesus. nao uma liberdade de fazer o que se quer — mas a liberdade de ser quem se e de verdade, em cristo. que corrente voce ainda carrega esta semana? ela pode ser quebrada. « senhor jesus, liberta-me de tudo o que me acorrenta. recebo hoje a tua verdadeira liberdade. » amem. a vida nova o que recomeca. liberdade libertacao correntes cristo prisao quebrada identidade"}, "15": {"categorie": "Vida Eterna", "theme": "Deus amou o mundo de tal maneira", "reference": "João 3:16", "texte": "Porque Deus amou ao mundo de tal maneira, que deu o seu Filho unigênito; para que todo aquele que nele crê não pereça, mas tenha a vida eterna.", "meditation": "Este versículo a gente costuma saber de cor. Mas esta semana releia devagar. Deus amou DE TAL MANEIRA. Não um pouco. Não moderadamente. De tal maneira. A ponto de dar o que tinha de mais precioso. O seu Filho. Por você. Às vezes penso em alguém que amo profundamente e me pergunto: eu sacrificaria o meu filho por essa pessoa? Eu não conseguiria. Deus o fez. É essa a medida do amor dele por você.", "priere": "« Pai, obrigado por este dom inacreditável. Que eu nunca tome o teu amor como algo garantido. » Amém.", "mots": ["amor", "vida eterna", "Filho", "sacrifício", "crer", "dom", "salvação"], "index": "vida eterna deus amou o mundo de tal maneira joao 3:16 porque deus amou ao mundo de tal maneira, que deu o seu filho unigenito; para que todo aquele que nele cre nao pereca, mas tenha a vida eterna. este versiculo a gente costuma saber de cor. mas esta semana releia devagar. deus amou de tal maneira. nao um pouco. nao moderadamente. de tal maneira. a ponto de dar o que tinha de mais precioso. o seu filho. por voce. as vezes penso em alguem que amo profundamente e me pergunto: eu sacrificaria o meu filho por essa pessoa? eu nao conseguiria. deus o fez. e essa a medida do amor dele por voce. « pai, obrigado por este dom inacreditavel. que eu nunca tome o teu amor como algo garantido. » amem. a vida nova o que recomeca. amor vida eterna filho sacrificio crer dom salvacao"}, "10": {"categorie": "Oração & Resposta", "theme": "Peça e você receberá", "reference": "Mateus 7:7-8", "texte": "Pedi, e vos será dado; buscai, e achareis; batei, e vos será aberto; Pois qualquer um que pede recebe; e quem busca acha; e ao que bate lhe é aberto.", "meditation": "Jesus usa três verbos de ação: peça, busque, bata. Ele não diz: espere passivamente. Convida-nos a uma fé ativa, persistente, que não desiste. Vivi a experiência de orações atendidas depois de meses de espera. Não era porque Deus não ouvia — era porque ele preparava algo maior. Bata à porta dele esta semana. Com fé. Com perseverança.", "priere": "« Senhor, venho bater à tua porta com fé. Apresento-te esta necessidade e confio em ti para a resposta. » Amém.", "mots": ["oração", "resposta", "pedido", "perseverança", "fé", "espera", "atendimento"], "index": "oracao & resposta peca e voce recebera mateus 7:7-8 pedi, e vos sera dado; buscai, e achareis; batei, e vos sera aberto; pois qualquer um que pede recebe; e quem busca acha; e ao que bate lhe e aberto. jesus usa tres verbos de acao: peca, busque, bata. ele nao diz: espere passivamente. convida-nos a uma fe ativa, persistente, que nao desiste. vivi a experiencia de oracoes atendidas depois de meses de espera. nao era porque deus nao ouvia — era porque ele preparava algo maior. bata a porta dele esta semana. com fe. com perseveranca. « senhor, venho bater a tua porta com fe. apresento-te esta necessidade e confio em ti para a resposta. » amem. a oracao falar com quem falou. oracao resposta pedido perseveranca fe espera atendimento"}, "13": {"categorie": "Força & Coragem", "theme": "Tudo posso naquele que me fortalece", "reference": "Filipenses 4:13", "texte": "Posso todas as coisas naquele  que me fortalece.", "meditation": "Atenção — este versículo não diz que você pode fazer tudo sozinho se acreditar bastante. Diz: naquele que me fortalece. A fonte é ele, não você. Aprendi isso à minha custa: quando tentei com as minhas próprias forças, muitas vezes fracassei. Quando agi apoiado nele — orando primeiro, buscando a vontade dele — as coisas se deram de outro modo. Esta semana, que montanha lhe parece impossível? Ela não é. Não naquele que fortalece.", "priere": "« Senhor, reconheço que sem ti nada posso. Fortalece-me para aquilo a que me chamas. » Amém.", "mots": ["força", "coragem", "Cristo", "impossível", "fortalecer", "poder", "vontade"], "index": "forca & coragem tudo posso naquele que me fortalece filipenses 4:13 posso todas as coisas naquele  que me fortalece. atencao — este versiculo nao diz que voce pode fazer tudo sozinho se acreditar bastante. diz: naquele que me fortalece. a fonte e ele, nao voce. aprendi isso a minha custa: quando tentei com as minhas proprias forcas, muitas vezes fracassei. quando agi apoiado nele — orando primeiro, buscando a vontade dele — as coisas se deram de outro modo. esta semana, que montanha lhe parece impossivel? ela nao e. nao naquele que fortalece. « senhor, reconheco que sem ti nada posso. fortalece-me para aquilo a que me chamas. » amem. a caminhada por em pratica, avancar. forca coragem cristo impossivel fortalecer poder vontade"}, "18": {"categorie": "Vitória & Libertação", "theme": "Deus nos dá a vitória", "reference": "1 Coríntios 15:57", "texte": "Mas graças a Deus, que nos dá vitória por meio do nosso Senhor Jesus Cristo.", "meditation": "A vitória é um dom, não uma conquista. Paulo não diz: ganhamos a vitória pelo nosso esforço. Diz: Deus no-la dá. Por Jesus Cristo. Lutei contra certas coisas durante anos, com as minhas próprias forças. E então entendi que a vitória não era para ser arrancada — era para ser recebida. Esta semana, que batalha lhe pesa? Dê graças primeiro — é o primeiro gesto da vitória.", "priere": "« Senhor, obrigado pela vitória que me dás por Jesus Cristo. Recebo-a pela fé, não pelas minhas forças. » Amém.", "mots": ["vitória", "libertação", "graça", "Jesus Cristo", "luta", "dom", "fé"], "index": "vitoria & libertacao deus nos da a vitoria 1 corintios 15:57 mas gracas a deus, que nos da vitoria por meio do nosso senhor jesus cristo. a vitoria e um dom, nao uma conquista. paulo nao diz: ganhamos a vitoria pelo nosso esforco. diz: deus no-la da. por jesus cristo. lutei contra certas coisas durante anos, com as minhas proprias forcas. e entao entendi que a vitoria nao era para ser arrancada — era para ser recebida. esta semana, que batalha lhe pesa? de gracas primeiro — e o primeiro gesto da vitoria. « senhor, obrigado pela vitoria que me das por jesus cristo. recebo-a pela fe, nao pelas minhas forcas. » amem. a caminhada por em pratica, avancar. vitoria libertacao graca jesus cristo luta dom fe"}, "2": {"categorie": "Alegria & Plenitude", "theme": "Que a sua alegria seja completa", "reference": "João 15:11", "texte": "Estas coisas eu tenho vos dito para que minha alegria esteja em vós, e vossa alegria seja completa.", "meditation": "Jesus não nos promete uma alegria pela metade. Promete uma alegria completa, transbordante, que não deixa nenhum vazio. Eu experimentei essa alegria em momentos em que tudo ia mal à minha volta. É aí que se descobre que ela não é uma emoção — é uma presença. A presença do próprio Jesus. Permaneça nele esta semana, fique ligado à sua Palavra, e deixe a alegria dele encher cada canto do seu coração.", "priere": "« Senhor Jesus, enche-me da tua alegria completa. Que a tua presença seja a minha maior riqueza esta semana. » Amém.", "mots": ["alegria", "completa", "Jesus", "plenitude", "presença", "permanecer"], "index": "alegria & plenitude que a sua alegria seja completa joao 15:11 estas coisas eu tenho vos dito para que minha alegria esteja em vos, e vossa alegria seja completa. jesus nao nos promete uma alegria pela metade. promete uma alegria completa, transbordante, que nao deixa nenhum vazio. eu experimentei essa alegria em momentos em que tudo ia mal a minha volta. e ai que se descobre que ela nao e uma emocao — e uma presenca. a presenca do proprio jesus. permaneca nele esta semana, fique ligado a sua palavra, e deixe a alegria dele encher cada canto do seu coracao. « senhor jesus, enche-me da tua alegria completa. que a tua presenca seja a minha maior riqueza esta semana. » amem. a presenca ele esta onde quer que eu va. alegria completa jesus plenitude presenca permanecer"}, "3": {"categorie": "Alegria & Presença", "theme": "Na tua presença há plenitude de alegria", "reference": "Salmos 16:11", "texte": "Tu me farás conhecer o caminho da vida; fartura de alegrias há em tua presença; agrados estão em tua mão direita para sempre.", "meditation": "A vereda da vida — não da sobrevivência, não da resistência, mas da VIDA. É isso que Deus quer para você. E essa vereda passa pela presença dele. Dou testemunho de que os momentos em que mais senti plenitude foram momentos de oração, de louvor, de leitura da Palavra. Não nas conquistas, não nos bens materiais. Na presença dele. Esta semana, busque a presença dele antes de qualquer outra coisa.", "priere": "« Senhor, faze-me conhecer a tua vereda. Escolho a tua presença como fonte da minha alegria. » Amém.", "mots": ["presença", "plenitude", "alegria", "vereda", "vida", "louvor", "oração"], "index": "alegria & presenca na tua presenca ha plenitude de alegria salmos 16:11 tu me faras conhecer o caminho da vida; fartura de alegrias ha em tua presenca; agrados estao em tua mao direita para sempre. a vereda da vida — nao da sobrevivencia, nao da resistencia, mas da vida. e isso que deus quer para voce. e essa vereda passa pela presenca dele. dou testemunho de que os momentos em que mais senti plenitude foram momentos de oracao, de louvor, de leitura da palavra. nao nas conquistas, nao nos bens materiais. na presenca dele. esta semana, busque a presenca dele antes de qualquer outra coisa. « senhor, faze-me conhecer a tua vereda. escolho a tua presenca como fonte da minha alegria. » amem. a presenca ele esta onde quer que eu va. presenca plenitude alegria vereda vida louvor oracao"}, "5": {"categorie": "Amor de Deus", "theme": "Nada pode separar você do amor de Deus", "reference": "Romanos 8:38-39", "texte": "Pois tenho certeza que nem a morte, nem a vida, nem anjos, nem principados, nem o presente, nem o futuro, nem poderes, nem altura, nem profundeza, nem qualquer outra criatura poderá nos separar do amor de Deus, que está em Cristo Jesus, nosso Senhor.", "meditation": "NADA. Foi a palavra que me atingiu quando reli este versículo esta semana. Nem a sua vergonha. Nem os seus erros passados. Nem as suas dúvidas. Nem mesmo a sua morte. Nada pode cortar o vínculo entre você e o amor de Deus. Atravessei períodos em que me sentia indigno desse amor. E então esta verdade me alcançou: não é o meu desempenho que me mantém no amor dele. É a fidelidade dele. Descanse nisso esta semana.", "priere": "« Senhor, obrigado pelo teu amor incondicional. Ajuda-me a crer nele plenamente, mesmo quando me sinto indigno. » Amém.", "mots": ["amor", "separação", "fidelidade", "Cristo Jesus", "dúvidas", "vergonha", "indigno"], "index": "amor de deus nada pode separar voce do amor de deus romanos 8:38-39 pois tenho certeza que nem a morte, nem a vida, nem anjos, nem principados, nem o presente, nem o futuro, nem poderes, nem altura, nem profundeza, nem qualquer outra criatura podera nos separar do amor de deus, que esta em cristo jesus, nosso senhor. nada. foi a palavra que me atingiu quando reli este versiculo esta semana. nem a sua vergonha. nem os seus erros passados. nem as suas duvidas. nem mesmo a sua morte. nada pode cortar o vinculo entre voce e o amor de deus. atravessei periodos em que me sentia indigno desse amor. e entao esta verdade me alcancou: nao e o meu desempenho que me mantem no amor dele. e a fidelidade dele. descanse nisso esta semana. « senhor, obrigado pelo teu amor incondicional. ajuda-me a crer nele plenamente, mesmo quando me sinto indigno. » amem. a presenca ele esta onde quer que eu va. amor separacao fidelidade cristo jesus duvidas vergonha indigno"}, "12": {"categorie": "Paz & Tranquilidade", "theme": "A paz que excede todo o entendimento", "reference": "Filipenses 4:6-7", "texte": "Não estejais ansiosos por coisa alguma; mas em tudo, por meio de orações e súplicas com ações de gratidão, sejam os vossos pedidos conhecidos por Deus; e a paz de Deus, que excede todo entendimento, guardará os vossos corações e as vossas mentes em Cristo Jesus.", "meditation": "Essa paz de que Paulo fala, eu a vivi em momentos em que, logicamente, eu não deveria estar em paz. É aí que se entende que ela excede o entendimento — não se explica, recebe-se. A chave que Paulo dá: apresente os seus pedidos a Deus com ação de graças. Não só os pedidos — com gratidão também. Experimente esta semana: antes de se inquietar, ore com gratidão. E observe.", "priere": "« Senhor, apresento-te as minhas preocupações com confiança e gratidão. Guarda o meu coração na tua paz. » Amém.", "mots": ["paz", "inquietação", "oração", "gratidão", "entendimento", "coração", "Cristo Jesus"], "index": "paz & tranquilidade a paz que excede todo o entendimento filipenses 4:6-7 nao estejais ansiosos por coisa alguma; mas em tudo, por meio de oracoes e suplicas com acoes de gratidao, sejam os vossos pedidos conhecidos por deus; e a paz de deus, que excede todo entendimento, guardara os vossos coracoes e as vossas mentes em cristo jesus. essa paz de que paulo fala, eu a vivi em momentos em que, logicamente, eu nao deveria estar em paz. e ai que se entende que ela excede o entendimento — nao se explica, recebe-se. a chave que paulo da: apresente os seus pedidos a deus com acao de gracas. nao so os pedidos — com gratidao tambem. experimente esta semana: antes de se inquietar, ore com gratidao. e observe. « senhor, apresento-te as minhas preocupacoes com confianca e gratidao. guarda o meu coracao na tua paz. » amem. o descanso parar, receber sem produzir. paz inquietacao oracao gratidao entendimento coracao cristo jesus"}, "17": {"categorie": "Descanso & Convite", "theme": "Venham a mim, e eu lhes darei descanso", "reference": "Mateus 11:28", "texte": "Vinde a mim todos vós que estais cansados e sobrecarregados, e eu vos farei descansar.", "meditation": "Cansado. Sobrecarregado. São as duas condições para receber este convite. Não forte. Não perfeito. Não com tudo resolvido. Cansado e sobrecarregado. Se é você esta semana — e penso que muitos de nós somos — este convite é para você. Conheci períodos de esgotamento profundo em que esta palavra literalmente me salvou. Nada de fórmula mágica. Apenas vir a ele, como você está, e receber esse descanso que o mundo não pode dar.", "priere": "« Senhor Jesus, venho a ti cansado e sobrecarregado. Dá-me o teu descanso. Deponho os meus fardos aos teus pés. » Amém.", "mots": ["descanso", "cansaço", "fardo", "convite", "esgotamento", "vir", "paz"], "index": "descanso & convite venham a mim, e eu lhes darei descanso mateus 11:28 vinde a mim todos vos que estais cansados e sobrecarregados, e eu vos farei descansar. cansado. sobrecarregado. sao as duas condicoes para receber este convite. nao forte. nao perfeito. nao com tudo resolvido. cansado e sobrecarregado. se e voce esta semana — e penso que muitos de nos somos — este convite e para voce. conheci periodos de esgotamento profundo em que esta palavra literalmente me salvou. nada de formula magica. apenas vir a ele, como voce esta, e receber esse descanso que o mundo nao pode dar. « senhor jesus, venho a ti cansado e sobrecarregado. da-me o teu descanso. deponho os meus fardos aos teus pes. » amem. o descanso parar, receber sem produzir. descanso cansaco fardo convite esgotamento vir paz"}, "21": {"categorie": "Testemunho & Poder", "theme": "Vocês serão minhas testemunhas", "reference": "Atos 1:8", "texte": "Mas vós recebereis poder do Espírito Santo, que virá sobre vós; e vós sereis minhas testemunhas, tanto em Jerusalém como em toda a Judeia, e Samaria, e até ao último lugar da terra.", "meditation": "Testemunha não é uma profissão. É alguém que conta o que viu. Nada mais. Você não precisa virar orador, nem saber toda a Bíblia antes de abrir a boca. Repare na ordem desta promessa: primeiro o poder, depois o testemunho. Não cabe a você carregar o peso de convencer. E repare até onde ela vai — Jerusalém, depois a Judeia, depois os confins da terra. Ela começa onde você está, à sua porta, com as pessoas que você já encontra. Esta semana, não procure a ocasião perfeita. Diga simplesmente, a uma única pessoa, o que Deus fez na sua vida.", "priere": "« Senhor, dá-me o teu poder, e a ocasião de dizer com simplicidade o que tu fizeste. » Amém.", "mots": ["testemunho", "poder", "Espírito Santo", "palavra", "cotidiano", "coragem", "simplicidade"], "index": "testemunho & poder voces serao minhas testemunhas atos 1:8 mas vos recebereis poder do espirito santo, que vira sobre vos; e vos sereis minhas testemunhas, tanto em jerusalem como em toda a judeia, e samaria, e ate ao ultimo lugar da terra. testemunha nao e uma profissao. e alguem que conta o que viu. nada mais. voce nao precisa virar orador, nem saber toda a biblia antes de abrir a boca. repare na ordem desta promessa: primeiro o poder, depois o testemunho. nao cabe a voce carregar o peso de convencer. e repare ate onde ela vai — jerusalem, depois a judeia, depois os confins da terra. ela comeca onde voce esta, a sua porta, com as pessoas que voce ja encontra. esta semana, nao procure a ocasiao perfeita. diga simplesmente, a uma unica pessoa, o que deus fez na sua vida. « senhor, da-me o teu poder, e a ocasiao de dizer com simplicidade o que tu fizeste. » amem. o testemunho devolver o que se recebeu. testemunho poder espirito santo palavra cotidiano coragem simplicidade"}, "1": {"categorie": "Alegria & Força", "theme": "A alegria do SENHOR é a sua força", "reference": "Neemias 8:10", "texte": "E disse-lhes mais: Ide, comei gorduras, e bebei doçuras, e enviai porções aos que não têm preparado; porque este é um dia consagrado ao nosso Senhor; portanto não vos entristeçais, porque a alegria do SENHOR é vossa força.", "meditation": "Esta semana quero falar com você da alegria. Não a alegria superficial que o mundo oferece, mas aquela que Deus quer derramar em você. Sou testemunha disso: essa alegria pode tomar conta de você de um modo sobrenatural. Ela não depende das circunstâncias, nem do que você está atravessando agora. Depende unicamente da sua relação com Jesus. Basta permanecer nele, na sua Palavra, e manter o olhar somente nele. Mesmo no meio das provações de cada dia, quando você escolhe confiar em Jesus apesar da dor, essa alegria se torna a sua força. É ela que permite atravessar as dificuldades com a paz dele.", "priere": "« Senhor, eu recebo a tua alegria. Enche-me da tua presença. » Amém.", "mots": ["alegria", "força", "SENHOR", "circunstâncias", "Jesus", "paz", "provações"], "index": "alegria & forca a alegria do senhor e a sua forca neemias 8:10 e disse-lhes mais: ide, comei gorduras, e bebei docuras, e enviai porcoes aos que nao tem preparado; porque este e um dia consagrado ao nosso senhor; portanto nao vos entristecais, porque a alegria do senhor e vossa forca. esta semana quero falar com voce da alegria. nao a alegria superficial que o mundo oferece, mas aquela que deus quer derramar em voce. sou testemunha disso: essa alegria pode tomar conta de voce de um modo sobrenatural. ela nao depende das circunstancias, nem do que voce esta atravessando agora. depende unicamente da sua relacao com jesus. basta permanecer nele, na sua palavra, e manter o olhar somente nele. mesmo no meio das provacoes de cada dia, quando voce escolhe confiar em jesus apesar da dor, essa alegria se torna a sua forca. e ela que permite atravessar as dificuldades com a paz dele. « senhor, eu recebo a tua alegria. enche-me da tua presenca. » amem. a provacao perseverar quando tudo resiste. alegria forca senhor circunstancias jesus paz provacoes"}, "4": {"categorie": "Força & Refúgio", "theme": "Deus é o seu refúgio e a sua força", "reference": "Salmos 46:1", "texte": "Deus é nosso refúgio e força; socorro oportuno nas angústias.", "meditation": "Quando tudo desaba à sua volta, quando as notícias são ruins, quando o coração pesa — esta promessa é para você. Deus não é um refúgio teórico. É um refúgio real, concreto, disponível agora. Sou testemunha disso: nos momentos mais escuros da minha vida encontrei nele um abrigo que nada nem ninguém pode dar. Você não precisa atravessar a sua angústia sozinho. Ele está aí, e o socorro dele nunca falta.", "priere": "« Senhor, hoje me refugio em ti. Sê a minha força onde eu sou fraco. » Amém.", "mots": ["refúgio", "força", "socorro", "angústia", "abrigo", "proteção", "fraqueza"], "index": "forca & refugio deus e o seu refugio e a sua forca salmos 46:1 deus e nosso refugio e forca; socorro oportuno nas angustias. quando tudo desaba a sua volta, quando as noticias sao ruins, quando o coracao pesa — esta promessa e para voce. deus nao e um refugio teorico. e um refugio real, concreto, disponivel agora. sou testemunha disso: nos momentos mais escuros da minha vida encontrei nele um abrigo que nada nem ninguem pode dar. voce nao precisa atravessar a sua angustia sozinho. ele esta ai, e o socorro dele nunca falta. « senhor, hoje me refugio em ti. se a minha forca onde eu sou fraco. » amem. a provacao perseverar quando tudo resiste. refugio forca socorro angustia abrigo protecao fraqueza"}, "19": {"categorie": "Proteção & Segurança", "theme": "Os seus anjos guardam você", "reference": "Salmos 91:11", "texte": "Porque ele ordenou aos anjos quanto a ti, para que guardem todos os teus caminhos.", "meditation": "Em todos os seus caminhos. Não só na igreja. Não só quando você se comporta bem. Em todos os seus caminhos. Esta promessa me acompanhou em momentos de perigo, de viagens difíceis, de situações incertas. Estou convencido de que Deus protegeu a minha família de coisas que eu nunca saberei. Esta semana, siga com esta certeza: você não está sozinho no seu caminho. Ele ordenou aos seus anjos que guardem você.", "priere": "« Senhor, obrigado pela tua proteção sobre a minha vida e a da minha família. Entrego os meus caminhos à tua guarda. » Amém.", "mots": ["proteção", "anjos", "guarda", "segurança", "caminhos", "família", "perigo"], "index": "protecao & seguranca os seus anjos guardam voce salmos 91:11 porque ele ordenou aos anjos quanto a ti, para que guardem todos os teus caminhos. em todos os seus caminhos. nao so na igreja. nao so quando voce se comporta bem. em todos os seus caminhos. esta promessa me acompanhou em momentos de perigo, de viagens dificeis, de situacoes incertas. estou convencido de que deus protegeu a minha familia de coisas que eu nunca saberei. esta semana, siga com esta certeza: voce nao esta sozinho no seu caminho. ele ordenou aos seus anjos que guardem voce. « senhor, obrigado pela tua protecao sobre a minha vida e a da minha familia. entrego os meus caminhos a tua guarda. » amem. a provacao perseverar quando tudo resiste. protecao anjos guarda seguranca caminhos familia perigo"}, "11": {"categorie": "Esperança & Futuro", "theme": "Deus tem um plano para você", "reference": "Jeremias 29:11", "texte": "Porque eu sei os pensamentos que penso quanto a vós, diz o SENHOR, pensamentos de paz, e não de mal, para vos dar um futuro com esperança.", "meditation": "Esta promessa foi dada a um povo no exílio. Na situação mais difícil deles, Deus diz: eu tenho um plano. Um plano de paz, não de mal. Um plano com um futuro e uma esperança. Se você atravessa hoje o seu próprio exílio — um tempo difícil, uma perda, uma transição — esta palavra é para você. Deus não improvisa com a sua vida. Ele tem um plano. E esse plano é bom.", "priere": "« Senhor, obrigado por teres um plano para a minha vida. Escolho confiar no teu futuro em vez dos meus medos. » Amém.", "mots": ["esperança", "futuro", "plano", "paz", "exílio", "confiança", "porvir"], "index": "esperanca & futuro deus tem um plano para voce jeremias 29:11 porque eu sei os pensamentos que penso quanto a vos, diz o senhor, pensamentos de paz, e nao de mal, para vos dar um futuro com esperanca. esta promessa foi dada a um povo no exilio. na situacao mais dificil deles, deus diz: eu tenho um plano. um plano de paz, nao de mal. um plano com um futuro e uma esperanca. se voce atravessa hoje o seu proprio exilio — um tempo dificil, uma perda, uma transicao — esta palavra e para voce. deus nao improvisa com a sua vida. ele tem um plano. e esse plano e bom. « senhor, obrigado por teres um plano para a minha vida. escolho confiar no teu futuro em vez dos meus medos. » amem. a esperanca o que permanece. esperanca futuro plano paz exilio confianca porvir"}, "20": {"categorie": "Esperança & Ressurreição", "theme": "Uma esperança viva", "reference": "1 Pedro 1:3-4", "texte": "Bendito seja o Deus e Pai de nosso Senhor Jesus Cristo. Segundo sua grande misericórdia, ele nos regenerou para uma esperança viva, por meio da ressurreição de Jesus Cristo dentre os mortos. E o resultado disso é uma herança incorruptível, incontaminável, e que não pode ser enfraquecida. Ela está guardada nos céus para vós,", "meditation": "Uma esperança viva — não morta, não parada, não teórica. Viva. Ela cresce, se alimenta, se renova. E está fundada em algo histórico e inabalável: a ressurreição de Jesus Cristo. Tudo pode se perder nesta vida — saúde, dinheiro, relações. Mas essa herança não pode ser corrompida, nem contaminada, nem murchar. É a certeza que me mantém de pé. Deixe que ela mantenha você de pé também, esta semana.", "priere": "« Senhor, obrigado por esta esperança viva. Que a ressurreição de Jesus seja a âncora da minha alma esta semana. » Amém.", "mots": ["esperança", "ressurreição", "herança", "viva", "misericórdia", "eternidade", "âncora"], "index": "esperanca & ressurreicao uma esperanca viva 1 pedro 1:3-4 bendito seja o deus e pai de nosso senhor jesus cristo. segundo sua grande misericordia, ele nos regenerou para uma esperanca viva, por meio da ressurreicao de jesus cristo dentre os mortos. e o resultado disso e uma heranca incorruptivel, incontaminavel, e que nao pode ser enfraquecida. ela esta guardada nos ceus para vos, uma esperanca viva — nao morta, nao parada, nao teorica. viva. ela cresce, se alimenta, se renova. e esta fundada em algo historico e inabalavel: a ressurreicao de jesus cristo. tudo pode se perder nesta vida — saude, dinheiro, relacoes. mas essa heranca nao pode ser corrompida, nem contaminada, nem murchar. e a certeza que me mantem de pe. deixe que ela mantenha voce de pe tambem, esta semana. « senhor, obrigado por esta esperanca viva. que a ressurreicao de jesus seja a ancora da minha alma esta semana. » amem. a esperanca o que permanece. esperanca ressurreicao heranca viva misericordia eternidade ancora"}, "22": {"categorie": "Luz & Vida", "theme": "Eu sou a luz do mundo", "reference": "João 8:12", "texte": "Falou-lhes pois Jesus outra vez, dizendo: Eu sou a luz do mundo; quem me seguir não andará em trevas, mas terá luz de vida.", "meditation": "Jesus não diz que mostra a luz, nem que fala dela. Diz que ele a é. A diferença é imensa: não se procura mais uma iluminação em algum lugar, segue-se alguém. E a promessa está ligada ao seguir — « quem me seguir ». Não quem entende tudo. Não quem enxerga longe. Quem caminha atrás. A luz não se dá de antemão, para mostrar todo o caminho; ela se dá passo a passo, à medida que você avança. Esta semana, se uma área da sua vida continua escura, não exija o mapa inteiro. Dê o passo seguinte com ele.", "priere": "« Senhor Jesus, tu és a luz. Não enxergo longe, mas te sigo. Ilumina o passo seguinte. » Amém.", "mots": ["luz", "trevas", "seguir", "caminho", "escuridão", "passo a passo", "vida"], "index": "luz & vida eu sou a luz do mundo joao 8:12 falou-lhes pois jesus outra vez, dizendo: eu sou a luz do mundo; quem me seguir nao andara em trevas, mas tera luz de vida. jesus nao diz que mostra a luz, nem que fala dela. diz que ele a e. a diferenca e imensa: nao se procura mais uma iluminacao em algum lugar, segue-se alguem. e a promessa esta ligada ao seguir — « quem me seguir ». nao quem entende tudo. nao quem enxerga longe. quem caminha atras. a luz nao se da de antemao, para mostrar todo o caminho; ela se da passo a passo, a medida que voce avanca. esta semana, se uma area da sua vida continua escura, nao exija o mapa inteiro. de o passo seguinte com ele. « senhor jesus, tu es a luz. nao enxergo longe, mas te sigo. ilumina o passo seguinte. » amem. a luz ele vem. luz trevas seguir caminho escuridao passo a passo vida"}};
+const M = {"resultats": "promessa(s)"};
+
+const vueListe = document.getElementById('liste');
+const vueDetail = document.getElementById('detail');
+const champ = document.getElementById('q');
+const compteRes = document.getElementById('compte-res');
+const rien = document.getElementById('rien');
+const cartes = [].slice.call(document.querySelectorAll('.promesse'));
+const fruits = [].slice.call(document.querySelectorAll('.fruit'));
+
+// sans accents et en minuscules : « prière » se trouve en tapant « priere »
+const pla = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+function filtrer(q) {
+  const m = pla(q.trim());
+  let n = 0;
+  cartes.forEach(c => {
+    const ok = !m || pla(P[c.dataset.n].index).includes(m);
+    c.hidden = !ok;
+    if (ok) n++;
+  });
+  fruits.forEach(f => {
+    f.hidden = ![].slice.call(f.querySelectorAll('.promesse')).some(c => !c.hidden);
+  });
+  compteRes.textContent = n + ' ' + M.resultats;
+  rien.hidden = n > 0;
+  return n;
+}
+
+function ouvrir(n) {
+  const p = P[n];
+  document.getElementById('f-cat').textContent = p.categorie;
+  document.getElementById('f-theme').textContent = p.theme;
+  document.getElementById('f-ref').textContent = p.reference;
+  document.getElementById('f-texte').textContent = p.texte;
+  document.getElementById('f-med').textContent = p.meditation;
+  document.getElementById('f-pri').textContent = p.priere;
+  const mots = document.getElementById('f-mots');
+  mots.innerHTML = '';
+  p.mots.forEach(mot => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = mot;
+    b.addEventListener('click', () => { fermer(); champ.value = mot; filtrer(mot); });
+    mots.appendChild(b);
+  });
+  vueListe.hidden = true;
+  vueDetail.classList.add('on');
+  history.pushState({ p: n }, '', '#' + n);
+  scrollTo(0, 0);
+}
+
+function fermer(pousser) {
+  vueDetail.classList.remove('on');
+  vueListe.hidden = false;
+  if (pousser !== false) history.pushState({}, '', '#');
+  scrollTo(0, 0);
+}
+
+cartes.forEach(c => c.addEventListener('click', () => ouvrir(c.dataset.n)));
+document.getElementById('retour').addEventListener('click', () => fermer());
+champ.addEventListener('input', () => filtrer(champ.value));
+document.getElementById('tout').addEventListener('click', () => {
+  champ.value = ''; filtrer(''); champ.focus();
+});
+addEventListener('popstate', e => {
+  if (e.state && e.state.p) ouvrir(e.state.p); else fermer(false);
+});
+
+const haut = document.getElementById('haut');
+addEventListener('scroll', () => haut.classList.toggle('on', scrollY > 400));
+haut.addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
+
+filtrer('');
+if (location.hash.length > 1 && P[location.hash.slice(1)]) ouvrir(location.hash.slice(1));
+</script>
+</body>
+</html>
