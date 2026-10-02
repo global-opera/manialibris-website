@@ -313,4 +313,23 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- LES PROMESSES DE DIEU / AS PROMESSAS DE DEUS
+       Vingt-trois promesses, classees selon les douze fruits de L'Arbre de vie. -->
+  <url>
+    <loc>https://manialibris.com/ressources/promesses/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/recursos/promessas/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/ressources/promesses/"/>
+  </url>
+  <url>
+    <loc>https://manialibris.com/recursos/promessas/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/recursos/promessas/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/ressources/promesses/"/>
+  </url>
+
 </urlset>
