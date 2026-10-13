@@ -270,6 +270,24 @@
   </url>
 
   <url>
+    <loc>https://manialibris.com/audiolivros/escondidos-ou-arrebatados/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/audiolivros/escondidos-ou-arrebatados/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/livres-audio/caches-ou-enleves/"/>
+  </url>
+
+  <url>
+    <loc>https://manialibris.com/livres-audio/caches-ou-enleves/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/audiolivros/escondidos-ou-arrebatados/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/livres-audio/caches-ou-enleves/"/>
+  </url>
+
+  <url>
     <loc>https://manialibris.com/audiolivros/o-lado-de-adao/</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>yearly</changefreq>
