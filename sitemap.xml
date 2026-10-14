@@ -270,6 +270,24 @@
   </url>
 
   <url>
+    <loc>https://manialibris.com/escondidos-ou-arrebatados.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/escondidos-ou-arrebatados.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/caches-ou-enleves.html"/>
+  </url>
+
+  <url>
+    <loc>https://manialibris.com/caches-ou-enleves.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/escondidos-ou-arrebatados.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/caches-ou-enleves.html"/>
+  </url>
+
+  <url>
     <loc>https://manialibris.com/audiolivros/escondidos-ou-arrebatados/</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>yearly</changefreq>
