@@ -341,12 +341,22 @@
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/livres-audio/jai-appris-a-etre-content/"/>
   </url>
 
-  <!-- Ce titre n'existe qu'en portugais en audio : pas d'equivalent francais. -->
   <url>
     <loc>https://manialibris.com/audiolivros/o-fio-oculto/</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/audiolivros/o-fio-oculto/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/livres-audio/le-fil-cache/"/>
+  </url>
+
+  <url>
+    <loc>https://manialibris.com/livres-audio/le-fil-cache/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manialibris.com/audiolivros/o-fio-oculto/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/livres-audio/le-fil-cache/"/>
   </url>
 
   <!-- Ce titre n'existe qu'en francais : pas d'equivalent portugais. -->
