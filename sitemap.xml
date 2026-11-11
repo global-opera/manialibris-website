@@ -341,6 +341,14 @@
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://manialibris.com/livres-audio/jai-appris-a-etre-content/"/>
   </url>
 
+  <!-- Ce titre n'existe qu'en portugais en audio : pas d'equivalent francais. -->
+  <url>
+    <loc>https://manialibris.com/audiolivros/o-fio-oculto/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Ce titre n'existe qu'en francais : pas d'equivalent portugais. -->
   <url>
     <loc>https://manialibris.com/livres-audio/quand-dieu-change-la-route/</loc>
